@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 16px;
+}
+
+#divBusca{
+    background-color:#ffffff;
+    border:solid 2px #c5ac20;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+    
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+  }
+  
+  #btnBusca{
+    border:none;
+    float:right;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#ffd000;
+  }
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-weight: 300;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+}
+
+.navbar__item {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
