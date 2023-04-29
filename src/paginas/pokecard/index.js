@@ -9,9 +9,9 @@ function PokeCard(){
     const   [listaPokemon, setListaPokemon] =useState([]);
 
     useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=3').then((resposta) => setListaPokemon(resposta.data.results));
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=9').then((resposta) => setListaPokemon(resposta.data.results));
     }, []);
-
+    
     return (
       <>
       {listaPokemon.map((item) => (

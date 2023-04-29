@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './paginas/navbar'
 import PokeCard from './paginas/pokecard';
+import Footer from './paginas/footer'
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     <Navbar></Navbar>
     <PokeCard></PokeCard>
+    <Footer></Footer>
     </>
   );
 }
