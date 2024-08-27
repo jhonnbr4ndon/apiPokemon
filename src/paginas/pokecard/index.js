@@ -5,28 +5,29 @@ import './estilo.css';
 
 
 
-function PokeCard(){
+function PokeCard({ limit }) {
     const   [listaPokemon, setListaPokemon] =useState([]);
 
     useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=9').then((resposta) => setListaPokemon(resposta.data.results));
-    }, []);
+      axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`)
+          .then((resposta) => setListaPokemon(resposta.data.results));
+  }, [limit]);
     
     return (
       <>
       {listaPokemon.map((item) => (
-      <Pokemon key={item.name} dados={item} />
+      <Pokemon key={item.name} dadosURL={item} />
       ))}
       </>
     );
   }
   
-  const Pokemon = ({dados}) =>{
+  const Pokemon = ({dadosURL}) =>{
     const [detalhes, setDetalhes] = useState(null);
 
     useEffect(() => {
-        axios.get(dados.url).then((resposta) => setDetalhes(resposta.data));
-    }, [dados.url]);
+        axios.get(dadosURL.url).then((resposta) => setDetalhes(resposta.data));
+    }, [dadosURL.url]);
     
     if (detalhes === null) {
         return <>Carregando...</>;
